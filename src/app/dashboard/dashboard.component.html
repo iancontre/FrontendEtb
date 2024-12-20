@@ -1,16 +1,4 @@
-<div class='dashboard'>
-    <div class="dashboard-nav">
-        <header><img src="assets/images/Logo.png" alt="Logo" /></header>
-        <nav class="dashboard-nav-list">
-            <a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i> Inicio</a>
-            <a href="#" class="dashboard-nav-item active" routerLink="/dashboard"><i class="fas fa-tachometer-alt"></i> 
-             Modulo <br> Parametrización</a>
-            <a href="#" class="dashboard-nav-item"><i class="fas fa-file-upload"></i> Modulo <br> Reportes</a>
-            <a href="#" class="dashboard-nav-item"><i class="fas fa-file-upload"></i> Administrador <br>de Personal</a>
-            <div class="nav-item-divider"></div>
-            <a href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Salir </a>
-        </nav>
-    </div>
+<app-menubar></app-menubar>
     <div class='dashboard-app'>
         <header class='dashboard-toolbar'><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
         </header>
@@ -43,7 +31,7 @@
                 </div>
 
                 <div class="cards-small-container">
-                    <div  class="card-small shadow">
+                    <div  class="card-small shadow" [routerLink]="['/elementosaCargo']">
                         <div class="card-icon">
                             <i class="fas fa-cogs"></i> 
                         </div>

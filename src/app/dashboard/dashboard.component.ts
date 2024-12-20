@@ -1,10 +1,11 @@
 import { RouterModule } from '@angular/router';  // Asegúrate de importar RouterModule
 import { Component } from '@angular/core';
+import { MenubarComponent } from '../menubar/menubar.component';
 
 @Component({
   selector: 'app-dashboard',
-  standalone: true,  // Marca el componente como standalone
-  imports: [RouterModule],  // Asegúrate de importar RouterModule si estás usando Router
+  standalone: true,  
+  imports: [RouterModule, MenubarComponent], 
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
