@@ -1,0 +1,91 @@
+<div class="dashboard">
+    <div class="dashboard-nav">
+        <header><img src="assets/images/Logo.png" alt="Logo" /></header>
+        <nav class="dashboard-nav-list">
+            <a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i> Inicio</a>
+            <a href="#" class="dashboard-nav-item active" routerLink="/dashboard"><i class="fas fa-tachometer-alt"></i> 
+                Modulo <br> Parametrización</a>
+            <a href="#" class="dashboard-nav-item"><i class="fas fa-file-upload"></i> Modulo <br> Reportes</a>
+            <a href="#" class="dashboard-nav-item"><i class="fas fa-file-upload"></i> Administrador <br>de Personal</a>
+            <div class="nav-item-divider"></div>
+            <a href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Salir </a>
+        </nav>
+    </div>
+    <div class="dashboard-app">
+        <header class="dashboard-toolbar">
+            <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+        </header>
+        <div class="dashboard-content">
+            <div class="container cards-container">
+                <!-- Card con tabla centrada -->
+                <div class="card" style="max-width: 100%; margin: 20px auto; border-radius: 12px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Elementos a Cargo</h5>
+                        <!-- Tabla de elementos -->
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Elemento</th>
+                                    <th>Código Interno</th>
+                                    <th>Inmovilizado</th>
+                                    <th>Serial</th>
+                                    <th>Marca</th>
+                                    <th>Código SAP</th>
+                                    <th>Tipo</th>
+                                    <th>Cantidad</th>
+                                    <th>Detalle</th>
+                                    <th>Faltante</th>
+                                    <th>Sobrante</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Fila de ejemplo con datos -->
+                                <tr>
+                                    <td>Elemento A</td>
+                                    <td>001</td>
+                                    <td>Sí</td>
+                                    <td>123456789</td>
+                                    <td>Marca A</td>
+                                    <td>SAP001</td>
+                                    <td>Tipo A</td>
+                                    <td>10</td>
+                                    <td class="detalle">
+                                        <i class="fas fa-eye"></i>
+                                    </td>
+                                    <td><input type="checkbox" class="faltante" /></td>
+                                    <td><input type="checkbox" class="sobrante" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Elemento B</td>
+                                    <td>002</td>
+                                    <td>No</td>
+                                    <td>987654321</td>
+                                    <td>Marca B</td>
+                                    <td>SAP002</td>
+                                    <td>Tipo B</td>
+                                    <td>5</td>
+                                    <td class="detalle">
+                                        <i class="fas fa-eye"></i>
+                                    </td>
+                                    <td><input type="checkbox" class="faltante" /></td>
+                                    <td><input type="checkbox" class="sobrante" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Opciones de acciones -->
+                        <div class="actions" style="display: flex; justify-content: space-between;">
+                            <div>
+                                <input type="checkbox" id="approveAll" />
+                                <label for="approveAll">Aprobar todos los elementos</label>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary"><i class="fas fa-check"></i> Aprobar Inventario</button>
+                                <button class="btn btn-secondary"><i class="fas fa-file-pdf"></i> Generar Reporte</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
