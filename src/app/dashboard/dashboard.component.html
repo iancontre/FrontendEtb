@@ -1,0 +1,58 @@
+<app-menubar></app-menubar>
+    <div class='dashboard-app'>
+        <header class='dashboard-toolbar'><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+        </header>
+        <div class="dashboard-content">
+           
+            <div class="container cards-container">
+                
+                <div class="card-large shadow">
+                    <div class="user-icon-wrapper">
+                        <img src="assets/images/icons/iconUser.png" alt="User Icon" class="user-icon-3d">
+                    </div>
+                    <div class="user-info">
+                        <div class="welcome-message">
+                            <p class="user-name"> ¡Bienvenido Julian Rodriguez!</p>
+                        </div>
+                        <div class="user-details">
+                            <div class="user-role">
+                                <strong>Rol principal ETB</strong>
+                                <p>Gestor de Proyectos</p>
+                            </div>
+                            <div class="user-other-roles">
+                                <strong>Roles Activos fijos:</strong>
+                                <ul>
+                                    <li>Usuario de activos fijos</li>
+                                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-small-container">
+                    <div  class="card-small shadow" [routerLink]="['/elementosaCargo']">
+                        <div class="card-icon">
+                            <i class="fas fa-cogs"></i> 
+                        </div>
+                        <h3 >Elementos a Cargo</h3>
+                        <p>Selecciona para ver tus activos fijos</p>
+                    </div>
+                    <div class="card-small shadow" [routerLink]="['/actualizarDatos']" >
+                        <div class="card-icon">
+                            <i class="fas fa-edit"></i> 
+                        </div>
+                        <h3>Actualizar Datos</h3>
+                        <p>Selecciona para actualizar los datos que requieras</p>
+                    </div>
+                    <div class="card-small shadow"  [routerLink]="['/tablaInfo']">
+                        <div class="card-icon">
+                            <i class="fas fa-file-alt"> </i> 
+                        </div>
+                        <h3>Contactos Administración de Activos Fijos</h3>
+                        <p>Seleciona para ver la información de los líderes y administradores de inventario</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        

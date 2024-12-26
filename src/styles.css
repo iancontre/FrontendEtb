@@ -1,0 +1,10 @@
+
+/*Styles generales*/
+@import url(https://db.onlinewebfonts.com/c/93a467f70a3e7b27a9b52a686f351dbe?family=DIN+Next+LT+Pro+Regular);
+body, html {
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    font-family: "DIN Next LT Pro Regular";
+    overflow: hidden;
+  }

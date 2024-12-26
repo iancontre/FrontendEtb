@@ -1,0 +1,121 @@
+<app-menubar></app-menubar>
+<div class="dashboard-app">
+    <header class="dashboard-toolbar">
+        <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+    </header>
+    <div class="container">
+        <div class="card mb-4 formulario">
+          <div class="card-body">
+            <form action="" method="POST">
+              <h2>Asignación de Administradores de Inventario</h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="numero_empleados">Número de Empleados por Administrador:</label>
+                    <input type="number" id="numero_empleados" class="form-control" min="1" value="1">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="centro_costos">Seleccionar Centro de Costos:</label>
+                    <select id="centro_costos" class="form-control">
+                      <option value="centro1">Centro 1</option>
+                      <option value="centro2">Centro 2</option>
+                      <option value="centro3">Centro 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="vicepresidencia">Seleccionar Vicepresidencia:</label>
+                    <select id="vicepresidencia" class="form-control">
+                      <option value="vp1">Vicepresidencia 1</option>
+                      <option value="vp2">Vicepresidencia 2</option>
+                      <option value="vp3">Vicepresidencia 3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="gerencia">Seleccionar Gerencia:</label>
+                    <select id="gerencia" class="form-control">
+                      <option value="gerencia1">Gerencia 1</option>
+                      <option value="gerencia2">Gerencia 2</option>
+                      <option value="gerencia3">Gerencia 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="jefe_inmediato">Seleccionar Jefe Inmediato:</label>
+                    <select id="jefe_inmediato" class="form-control">
+                      <option value="jefe1">Jefe 1</option>
+                      <option value="jefe2">Jefe 2</option>
+                      <option value="jefe3">Jefe 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                  <div class="form-group w-100">
+                    <button type="submit" class="btn btn-primary btn-block filtrarBusqueda">Filtrar búsqueda</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="card tablaContenedor">
+          <div class="card-body">
+            <h3>Lista de Empleados</h3>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover mx-auto custom-table">
+                  <thead class="Titulos">
+                    <tr>
+                      <th>Seleccionar</th>
+                      <th>Cédula</th>
+                      <th>ETB</th>
+                      <th>Nombres</th>
+                      <th>Cargo</th>
+                      <th>Número centro de costo</th>
+                      <th>Centro de costo</th>
+                      <th>Número vicepresidencia</th>
+                      <th>Vicepresidencia</th>
+                      <th>Nombre jefe inmediato</th>
+                      <th>Administrador de inventario</th>
+                      <th>Correo admin inventario</th>
+                      <th>Teléfono contacto admin inventario</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of items | paginate: { itemsPerPage: 2, currentPage: p }">
+                      <td><input type="checkbox" class="rowCheckbox"></td>
+                      <td>{{ item.cedula }}</td>
+                      <td>{{ item.etb }}</td>
+                      <td>{{ item.nombres }}</td>
+                      <td>{{ item.cargo }}</td>
+                      <td>{{ item.numeroCentroCosto }}</td>
+                      <td>{{ item.centroCosto }}</td>
+                      <td>{{ item.numeroVicepresidencia }}</td>
+                      <td>{{ item.vicepresidencia }}</td>
+                      <td>{{ item.jefeInmediato }}</td>
+                      <td>{{ item.adminInventario }}</td>
+                      <td>{{ item.correoAdminInventario }}</td>
+                      <td>{{ item.telefonoAdminInventario }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <pagination-controls 
+                (pageChange)="p = $event" 
+                [previousLabel]="'Anterior'" 
+                [nextLabel]="'Siguiente'">
+              </pagination-controls>
+                            </div>
+            <div class="form-group mt-4 asignarAdmin">
+              <button class="btn btn-success btn-block">Asignar Administrador</button>
+            </div>
+          </div>
+        </div>  
+      </div>
+</div>
