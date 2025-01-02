@@ -17,12 +17,6 @@
 .container .tablaContenedor .card-body{
     border-radius: 16px;
 }
-.container .formulario{
-    margin: 30px 0px 0px 0px;
-}
-.container .tablaContenedor{
-    margin: 40px 0px 0px 0px;
-}
 
 .card-body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -30,12 +24,12 @@
 
 form h2 {
     color: #008ec1;
-    margin: 20px 0;
+    margin: 3px 0;
 }
 
 .tablaContenedor h3 {
     color: #008ec1;
-    margin: 15px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
 }
 
 .table th {
@@ -81,9 +75,10 @@ form .form-group input {
 
 
 form .filtrarBusqueda {
-    margin: 30px 0 0 0; 
+    margin: 0px 0 0 0 !important; 
     background-color: #EB830C;
     border: none;
+    color: #fff;
     border-radius: 8px;
     height: 40px;
     width: auto;
@@ -105,7 +100,7 @@ form  .filtrarBusqueda:hover {
     transform: scale(1.05);
 }
 
-.asignarAdmin button {
+.asignarFecha button {
     background-color: #EB830C;
     border: none;
     transition: 0.4s;
@@ -113,13 +108,12 @@ form  .filtrarBusqueda:hover {
     color: white;
 }
 
-.asignarAdmin button:hover {
+.asignarFecha button:hover {
     background-color: #008ec1;
     transform: scale(1.05);
 }
 
 .table-responsive {
-    margin-top: 15px;
     margin-bottom: 10px;
     overflow-x: auto; 
     -webkit-overflow-scrolling: touch; 
@@ -193,6 +187,47 @@ form .form-group input:focus {
     margin-top: 0; 
 }
 
+/* Estilo para los campos de fecha */
+.form-group.fecha label {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group.fecha input {
+    margin-top: 5px;
+    background-color: #fffdfd;
+    border: 1px solid #e6e6e6;
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.tablaContenedor h4{
+
+    color: #008EC1;
+}
+.form-group.fecha input:focus {
+    border-color: #008EC1; 
+    outline: none; 
+
+}
+.row .col-md-5.fecha {
+    margin-right: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.uniform-width {
+    width: 100%;
+    box-sizing: border-box;
+}
 
    /*Styles nav*/
 nav {

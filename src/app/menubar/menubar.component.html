@@ -2,11 +2,23 @@
 <div class="dashboard-nav">
     <header><img src="assets/images/Logo.png" alt="Logo" /></header>
     <nav class="dashboard-nav-list">
-        <a href="#" class="dashboard-nav-item" ><i class="fas fa-home"></i> Inicio</a>
-        <a href="/moduloParametrizacion" class="dashboard-nav-item" ><i class="fas fa-cogs"></i> Modulo <br> Parametrización</a>
-        <a href="#" class="dashboard-nav-item" routerLink="/dashboard/reportes"><i class="fas fa-file-upload"></i> Modulo <br> Reportes</a>
-        <a href="#" class="dashboard-nav-item" routerLink="/dashboard/administrador"><i class="fas fa-file-upload"></i> Administrador <br>de Personal</a>
-        <div class="nav-item-divider"></div>
+        <a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i> Inicio</a>
+        <div class="dropdown">
+            <a href="#" class="dashboard-nav-item dropdown-toggle" (click)="toggleSubmenu(); $event.preventDefault();">
+                <i class="fas fa-cogs"></i> Módulos <br> Parametrizaciónes
+                <span class="caret" [ngClass]="{'rotate': isSubmenuOpen}">▼</span>
+            </a>
+            <div *ngIf="isSubmenuOpen" class="submenu">
+                <a href="/moduloParametrizacion" class="dashboard-nav-item"  (click)="keepSubmenuOpen();">
+                    <i class="fas fa-cogs"></i> Modulo Parametrizacion
+                </a>
+                <a href="/aprobarFecha" class="dashboard-nav-item" (click)="keepSubmenuOpen();">
+                    <i class="fas fa-cogs"></i> Aprobar y asignar <br> inventarios
+                </a>
+            </div>
+        </div>
+        <a href="#" class="dashboard-nav-item" routerLink="/dashboard/reportes"><i class="fas fa-file-upload"></i> Módulo <br> Reportes</a>
+        <a href="#" class="dashboard-nav-item" routerLink="/dashboard/administrador"><i class="fas fa-file-upload"></i> Administrador <br> de Personal</a>
         <a href="#" class="dashboard-nav-item" routerLink="/logout"><i class="fas fa-sign-out-alt"></i> Salir </a>
     </nav>
 </div>

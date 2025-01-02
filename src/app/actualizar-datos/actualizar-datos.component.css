@@ -1,9 +1,7 @@
 .container {
-  position: absolute;
-  top: 55%;
-  left: 56%;
-  transform: translate(-50%, -50%);
-  width: 45%; 
+  width: 90%; /* Ocupa un 90% del ancho de la pantalla */
+  max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
 .card .encabezado h3 {
@@ -43,14 +41,15 @@ form .camposActu{
   margin: 0px 0px 15px 0px;
 }
 .custom-input {
-  height: 40px;
-  width: 80%;
+  height: 30px; 
+  width: 90%;  
   background-color: #fffdfd;
   border: solid 1px #e6e6e6;
   border-radius: 10px;
   padding: 10px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .custom-input:focus {
   border-color: #01a5e1; 
   box-shadow: 0 0 5px rgba(1, 167, 228, 0.673); 
@@ -58,16 +57,25 @@ form .camposActu{
 }
 
 .custom-btn {
-  margin: 17px 50px -10px 0px;
   background-color: #eb830c;
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   transition: background-color 0.5s ease, transform 0.5s ease;
-  justify-self: end;
   padding: 10px 20px;
+  margin-left: 0; 
+  margin-right: auto;
+  margin-bottom:-20px;
+  height: 45px;
 }
+
+.button-container {
+  display: flex;
+  justify-content: flex-start; 
+  margin-top: 20px;
+}
+
 
 .custom-btn:hover {
   background-color: #0092bc;
