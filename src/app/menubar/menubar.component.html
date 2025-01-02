@@ -6,7 +6,7 @@
         <div class="dropdown">
             <a href="#" class="dashboard-nav-item dropdown-toggle" (click)="toggleSubmenu(); $event.preventDefault();">
                 <i class="fas fa-cogs"></i> Módulos <br> Parametrizaciónes
-                <span class="caret" [ngClass]="{'rotate': isSubmenuOpen}">▼</span>
+                <i class="fa-solid fa-chevron-down caret" style="font-size: 15px;" [ngClass]="{'rotate': isSubmenuOpen}"></i>
             </a>
             <div *ngIf="isSubmenuOpen" class="submenu">
                 <a href="/moduloParametrizacion" class="dashboard-nav-item"  (click)="keepSubmenuOpen();">
