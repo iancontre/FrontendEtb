@@ -1,0 +1,311 @@
+<app-menubar></app-menubar>
+<div class="dashboard-app">
+    <header class="dashboard-toolbar">
+        <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+    </header>
+    <div class="dashboard-content">
+        <div class="container cards-container">
+            <div class="card" >
+                <div class="card-body">
+                    <h5 class="card-title text-center">Detalle Elementos a Cargo</h5>
+                    <div class="containerdos">
+                        <div class="tabs">
+                          <input type="radio" id="radio-1" name="tabs" [(ngModel)]="selectedTab" value="1" />
+                          <label class="tab" for="radio-1">     Datos <br> Básicos </label>
+                          
+                          <input type="radio" id="radio-2" name="tabs" [(ngModel)]="selectedTab" value="2" />
+                          <label class="tab" for="radio-2">Características <br> Técnicas</label>
+                          
+                          <input type="radio" id="radio-3" name="tabs" [(ngModel)]="selectedTab" value="3" />
+                          <label class="tab" for="radio-3">Histórico</label>
+                          <input type="radio" id="radio-4" name="tabs" [(ngModel)]="selectedTab" value="4" />
+                          <label class="tab" for="radio-4">Hoja de vida</label>
+                      
+                          <span class="glider"></span>
+                        </div>
+                        <div class="tab-content">
+                            <div *ngIf="selectedTab === '1'">
+                                <p>Datos Básicos de elementos a Cargo</p>
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre del elemento</th>
+                                            <th>Descripción SAP</th>
+                                            <th>Código SAP</th>
+                                            <th>Inmovilizado</th>
+                                            <th>Tipo de elemento</th>
+                                            <th>Estado última transacción</th>
+                                            <th>Marca</th>
+                                            <th>Serial</th>
+                                            <th>Código de barras</th>
+                                            <th>No. de factura</th>
+                                            <th>Condiciones Valor</th>
+                                            <th>Ubicaciones</th>
+                                            <th>Fecha de adquisición</th>
+                                            <th>Número de contrato</th>
+                                            <th>Nuevo/Usado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Impresora HP</td>
+                                            <td>Impresora multifuncional</td>
+                                            <td>SAP12345</td>
+                                            <td>Sí</td>
+                                            <td>Mayor cuantía</td>
+                                            <td>
+                                                <select class="form-group styled-select">
+                                                    <option value="reintegro">Reintegro</option>
+                                                    <option value="baja">Dado de baja</option>
+                                                    <option value="faltante">Faltante por inventario</option>
+                                                    <option value="perdida">Perdida</option>
+                                                    <option value="aseguradora">Aseguradora</option>
+                                                </select>
+                                            </td>
+                                            <td>HP</td>
+                                            <td>SN-HP123456</td>
+                                            <td>CB-123456789</td>
+                                            <td>FAC-456789</td>
+                                            <td>
+                                                <ul class="no-bullets">
+                                                    <li>Descripción: Impresora multifuncional con escáner</li>
+                                                    <li>Costo histórico: $1,200</li>
+                                                    <li>Depreciación: $300</li>
+                                                    <li>Neto contable: $900</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <select class="form-group styled-select">
+                                                    <option value="ubicacion1">Bodega Principal</option>
+                                                    <option value="ubicacion2">Oficina Central</option>
+                                                    <option value="ubicacion3">Sucursal Norte</option>
+                                                </select>
+                                            </td>
+                                            <td>2023-05-15</td>
+                                            <td>CON-987654</td>
+                                            <td>
+                                                <select class="form-group styled-select">
+                                                    <option value="nuevo">Nuevo</option>
+                                                    <option value="usado">Usado</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monitor Dell</td>
+                                            <td>Monitor LED 24 pulgadas</td>
+                                            <td>SAP67890</td>
+                                            <td>No</td>
+                                            <td>Leasing</td>
+                                            <td>
+                                                <select class="form-group styled-select">
+                                                    <option value="reintegro">Reintegro</option>
+                                                    <option value="baja">Dado de baja</option>
+                                                    <option value="faltante">Faltante por inventario</option>
+                                                    <option value="perdida">Perdida</option>
+                                                    <option value="aseguradora">Aseguradora</option>
+                                                </select>
+                                            </td>
+                                            <td>Dell</td>
+                                            <td>SN-DELL456789</td>
+                                            <td>CB-987654321</td>
+                                            <td>FAC-123456</td>
+                                            <td>
+                                                <ul class="no-bullets">
+                                                    <li>Descripción: Monitor LED Full HD</li>
+                                                    <li>Costo histórico: $250</li>
+                                                    <li>Depreciación: $50</li>
+                                                    <li>Neto contable: $200</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <select class="form-group styled-select">
+                                                    <option value="ubicacion1">Bodega Principal</option>
+                                                    <option value="ubicacion2">Oficina Central</option>
+                                                    <option value="ubicacion3">Sucursal Norte</option>
+                                                </select>
+                                            </td>
+                                            <td>2022-11-20</td>
+                                            <td>CON-123789</td>
+                                            <td>
+                                                <select class="form-group styled-select">
+                                                    <option value="nuevo">Nuevo</option>
+                                                    <option value="usado">Usado</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                     
+                            <div *ngIf="selectedTab === '2'">
+                                <p>Datos Básicos de elementos a Cargo</p>
+                                <div class="cardos d-flex justify-content-center align-items-center" style="min-height: 59vh;">
+                                  <div class="card-body">
+                                    <form>
+                                      <div class="form-group d-flex">
+                                        <div class="flex-grow-1">
+                                          <label for="caracteristicas">Características</label>
+                                          <input type="text" id="caracteristicas" class="form-control" placeholder="Ingrese características" />
+                                        </div>
+                                        <div class="ml-2">
+                                          <button type="button" class="btn btn-primary btn-sm">
+                                            <i class="fas fa-plus-circle"></i> Nuevo Movimiento
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div class="form-row">
+                                        
+                                        <div class="form-column">
+                                          <div class="form-group">
+                                            <label for="imagen">
+                                              <i class="fas fa-image"></i> Cargar Imagen
+                                            </label>
+                                            <div class="file-upload-wrapper">
+                                              <input type="file" id="imagen" class="file-input" />
+                                              <button type="button" class="btn btn-secondary file-button">
+                                                <i class="fas fa-upload"></i> Seleccionar Archivo
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="form-column">
+                                          <div class="form-group">
+                                            <label for="descripcion">Descripción</label>
+                                            <textarea id="descripcion" class="form-control" rows="4" placeholder="Ingrese la descripción"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="button-group mt-3">
+                                        <button type="submit" class="btn btn-success btn-sm">
+                                          <i class="fas fa-save"></i> Guardar
+                                        </button>
+                                        <button type="button" class="btn btn-info btn-sm">
+                                          <i class="fas fa-plus"></i> Adicionar
+                                        </button>
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                          <i class="fas fa-trash-alt"></i> Eliminar
+                                        </button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                          <div *ngIf="selectedTab === '3'">
+                            <p>Hostórico</p>
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                  <tr>
+                                    <th>Nombre del elemento</th>
+                                    <th>Identificador del movimiento</th>
+                                    <th>Fecha</th>
+                                    <th>Cantidad</th>
+                                    <th>ETB origen</th>
+                                    <th>Nombre ETB origen</th>
+                                    <th>Centro de costos ETB origen</th>
+                                    <th>ETB destino</th>
+                                    <th>Nombre ETB destino</th>
+                                    <th>Centro de costos ETB destino</th>
+                                    <th>Creado por</th>
+                                    <th>Fecha de creación</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Impresora HP</td>
+                                    <td>MOV-123456</td>
+                                    <td>2023-06-15</td>
+                                    <td>5</td>
+                                    <td>ETB001</td>
+                                    <td>Bodega Central</td>
+                                    <td>CC001</td>
+                                    <td>ETB002</td>
+                                    <td>Oficina Norte</td>
+                                    <td>CC002</td>
+                                    <td>Juan Pérez (Usuario ETB)</td>
+                                    <td>2023-06-01</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Monitor Dell</td>
+                                    <td>MOV-789012</td>
+                                    <td>2023-07-10</td>
+                                    <td>3</td>
+                                    <td>ETB003</td>
+                                    <td>Sucursal Sur</td>
+                                    <td>CC003</td>
+                                    <td>ETB004</td>
+                                    <td>Bodega Principal</td>
+                                    <td>CC004</td>
+                                    <td>María López (Usuario ETB)</td>
+                                    <td>2023-07-05</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                          </div>
+                          <div *ngIf="selectedTab === '4'">
+                            <p>Hoja de vida</p>
+                            <div class="cardos d-flex justify-content-center align-items-center" style="min-height: 59vh;">
+                                <div class="card-body">
+                                    <form id="formHoja">
+                                        <div class="form-groupdos" >
+                                            <label for="fecha">Fecha:</label>
+                                            <input type="date" id="fecha" class="form-control" required>
+                                        </div>
+                                    
+                                        <div class="form-groupdos">
+                                            <label for="tipologia">Tipología:</label>
+                                            <select id="tipologia" class="form-control" required>
+                                                <option value="">Seleccione una opción</option>
+                                                <option value="mantenimiento-correctivo">Mantenimiento Correctivo</option>
+                                                <option value="mantenimiento-preventivo">Mantenimiento Preventivo</option>
+                                                <option value="calibracion">Calibración</option>
+                                                <option value="fecha-calibracion">Fecha de Calibración</option>
+                                                <option value="proxima-fecha-calibracion">Próxima Fecha de Calibración</option>
+                                                <option value="compra">Compra</option>
+                                            </select>
+                                        </div>
+                                    
+                                        <div class="form-groupdos">
+                                            <label for="descripcion">Descripción:</label>
+                                            <textarea id="descripcion" class="form-control" rows="3" placeholder="Texto explicativo del tipo de mantenimiento que se realizó" required></textarea>
+                                        </div>
+                                    
+                                        <div class="form-groupdos">
+                                            <label for="proveedor">Proveedor:</label>
+                                            <input type="text" id="proveedor" class="form-control" placeholder="Quien realizó el mantenimiento – info escrita descriptiva" required>
+                                        </div>
+                                    
+                                        <div class="form-groupdos">
+                                            <label for="numero-contrato">No de contrato del proveedor:</label>
+                                            <input type="text" id="numero-contrato" class="form-control" placeholder="Número de contrato del proveedor" required>
+                                        </div>
+                                    
+                                        <div class="form-groupdos">
+                                            <label for="area-interna">Área Interna:</label>
+                                            <input type="text" id="area-interna" class="form-control" placeholder="Área interna que requiere el mantenimiento">
+                                        </div>
+                                    
+                                        <div class="form-groupdos">
+                                            <label for="informes">Informe adicional:</label>
+                                            <textarea id="informes" class="form-control" rows="3" placeholder="Detalles adicionales requeridos por las áreas usuarias"></textarea>
+                                        </div>
+                                    
+                                        <div class="actionsdos" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                                            <button type="button" class="btn btn-success">
+                                                <i class="fas fa-file-excel"></i> Generar Reporte
+                                            </button>
+                                            <button type="button" class="btn btn-primary">
+                                                <i class="fas fa-upload"></i> Cargar Acta de Mantenimiento
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
