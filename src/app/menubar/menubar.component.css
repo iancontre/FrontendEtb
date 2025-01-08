@@ -9,8 +9,16 @@
     box-sizing: border-box;
 }
 
- 
+.dropdown a .caret{
+    margin: 8px -8px 0px 15px;
+}
+.caret {
+    transition: transform 0.3s ease;
+}
 
+.rotate {
+    transform: rotate(180deg);
+}
 
 nav {
     display: block;

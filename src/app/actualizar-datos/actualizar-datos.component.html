@@ -1,0 +1,80 @@
+<app-menubar></app-menubar>
+<div class="dashboard-app">
+    <header class="dashboard-toolbar">
+        <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css">
+    </header>
+    <div class="dashboard-content"> 
+        <div class="container mt-5">
+            <!-- Tarjeta con la clase card -->
+            <div class="card shadow">
+                <div class="card-body">
+                  <div class="encabezado">
+                    <h3 class="text-left mb-4">Actualizar Datos</h3>
+                    <p>Modifica los datos requeridos</p>
+                 </div>
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6 camposActu">
+                                <label for="cedula" class="form-label">Cédula</label>
+                                <input type="text" class="form-control custom-input" id="cedula" placeholder="1069655756" readonly>
+                            </div>
+                            <div class="col-md-6 camposActu">
+                                <label for="etb" class="form-label">ETB</label>
+                                <input type="text" class="form-control custom-input" id="etb" placeholder="ETB" readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6 camposActu">
+                                <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control custom-input" id="nombreCompleto" placeholder="Miguel Angel Sanchez" readonly>
+                            </div>
+                            <div class="col-md-6 camposActu">
+                                <label for="ubicacionFisica" class="form-label">Ubicación Física</label>
+                                <input type="text" class="form-control custom-input" id="ubicacionFisica" placeholder="Cra 8 #20-56">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6 camposActu">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="text" class="form-control custom-input" id="telefono" placeholder="1209806743">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="movil" class="form-label">Móvil</label>
+                                <input type="text" class="form-control custom-input" id="movil" placeholder="3304455183">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6 camposActu">
+                                <label for="correo" class="form-label">Correo Corporativo</label>
+                                <input type="email" class="form-control custom-input" id="correo" placeholder="miguel.sanchezv@etb.com.co" readonly>
+                            </div>
+                            <div class="col-md-6 camposActu">
+                                <label for="centroCostos" class="form-label">Centro de Costos</label>
+                                <input type="text" class="form-control custom-input" id="centroCostos" placeholder="CC-1123-IT" readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6 camposActu">
+                                <label for="instanciaSuperior" class="form-label">Instancia Superior</label>
+                                <input type="text" class="form-control custom-input" id="instanciaSuperior" placeholder="Gerencia Soluciones Tecnologicas" readonly>
+                            </div>
+                            <div class="col-md-6 camposActu">
+                                <label for="cargo" class="form-label">Cargo</label>
+                                <input type="text" class="form-control custom-input" id="cargo" placeholder="Ingeniero" readonly>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" class="btn custom-btn">
+                                Actualizar Datos
+                            </button>
+                        </div>                  
+                    </form>
+                </div>
+            </div>          
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+</div>

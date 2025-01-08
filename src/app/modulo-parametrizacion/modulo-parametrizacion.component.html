@@ -1,0 +1,112 @@
+<app-menubar> </app-menubar>
+<div class="dashboard-app">
+    <header class="dashboard-toolbar">
+        <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css">
+    </header>
+    <div class="container">
+        <div class="card mb-4 formulario">
+            <div class="card-body">
+              <form action="" method="POST">
+                <h2>Asignación de Administradores de Inventario</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="numero_empleados">Número de Empleados por Administrador:</label>
+                            <input type="number" id="numero_empleados" class="form-control uniform-width" min="1" value="1">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="centro_costos">Centro de Costos:</label>
+                            <input type="text" id="centro_costos" class="form-control uniform-width" placeholder="Ej: Centro 1">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="vicepresidencia">Vicepresidencia:</label>
+                            <input type="text" id="vicepresidencia" class="form-control uniform-width" placeholder="Ej: Vicepresidencia 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="gerencia">Gerencia:</label>
+                            <input type="text" id="gerencia" class="form-control uniform-width" placeholder="Ej: Gerencia 1">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="jefe_inmediato">Jefe Inmediato:</label>
+                            <input type="text" id="jefe_inmediato" class="form-control uniform-width" placeholder="Ej: Jefe 1">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary filtrarBusqueda">Filtrar búsqueda</button>
+                    </div>
+                </div>
+            </form>          
+            </div>
+        </div>
+        <div class="card tablaContenedor">
+          <div class="card-body">
+              <h3>Lista de Empleados</h3>
+      
+              <!-- Tabla -->
+              <div class="table-responsive">
+                  <table class="table table-bordered table-hover mx-auto custom-table">
+                      <thead class="Titulos">
+                          <tr>
+                              <th>Seleccionar</th>
+                              <th>Cédula</th>
+                              <th>ETB</th>
+                              <th>Nombres</th>
+                              <th>Cargo</th>
+                              <th>Número centro de costo</th>
+                              <th>Centro de costo</th>
+                              <th>Número vicepresidencia</th>
+                              <th>Vicepresidencia</th>
+                              <th>Nombre jefe inmediato</th>
+                              <th>Administrador de inventario</th>
+                              <th>Correo admin inventario</th>
+                              <th>Teléfono contacto admin inventario</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let item of items | paginate: { itemsPerPage: 2, currentPage: p }">
+                              <td><input type="checkbox" class="rowCheckbox"></td>
+                              <td>{{ item.cedula }}</td>
+                              <td>{{ item.etb }}</td>
+                              <td>{{ item.nombres }}</td>
+                              <td>{{ item.cargo }}</td>
+                              <td>{{ item.numeroCentroCosto }}</td>
+                              <td>{{ item.centroCosto }}</td>
+                              <td>{{ item.numeroVicepresidencia }}</td>
+                              <td>{{ item.vicepresidencia }}</td>
+                              <td>{{ item.jefeInmediato }}</td>
+                              <td>{{ item.adminInventario }}</td>
+                              <td>{{ item.correoAdminInventario }}</td>
+                              <td>{{ item.telefonoAdminInventario }}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <pagination-controls 
+                      (pageChange)="p = $event" 
+                      [previousLabel]="'Anterior'" 
+                      [nextLabel]="'Siguiente'">
+                  </pagination-controls>
+              </div>
+              
+              <!-- Botón de asignar administrador -->
+              <div class="form-group mt-4 asignarAdmin">
+                  <button class="btn btn-success btn-block">Asignar Administrador</button>
+              </div>
+          </div>
+      </div>
+      
+      
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js"></script>

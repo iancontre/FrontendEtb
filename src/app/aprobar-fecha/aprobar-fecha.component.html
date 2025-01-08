@@ -1,0 +1,133 @@
+<app-menubar> </app-menubar>
+<div class="dashboard-app">
+    <header class="dashboard-toolbar">
+        <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css">
+    </header>
+    <div class="container">
+        <div class="card mb-4 formulario">
+            <div class="card-body">
+              <form action="" method="POST">
+                <h2>Filtros de busqueda</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="centroCostos">Centro de costos:</label>
+                            <input type="text" id="CentroCostos" class="form-control uniform-width" min="1" value="1">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="numElemtos">Numero elementos asignados:</label>
+                            <input type="text" id="numElemtos" class="form-control uniform-width" placeholder="Ej: 3">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="vicepresidencia">Vicepresidencia:</label>
+                            <input type="text" id="vicepresidencia" class="form-control uniform-width" placeholder=" Vicepresidencia 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="ubicacion">Ubicacion:</label>
+                            <input type="text" id="ubicacion" class="form-control uniform-width" placeholder="Ubicacion">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="jefe_inmediato">Jefe Inmediato:</label>
+                            <input type="text" id="jefe_inmediato" class="form-control uniform-width" placeholder="Ej: Jefe 1">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="jefe_inmediato">Administrador inventario:</label>
+                            <input type="text" id="adminInventario" class="form-control uniform-width" placeholder="Administrador inventario">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3  align-items-end">
+                        <button type="submit" class="filtrarBusqueda">Filtrar búsqueda</button>
+                    </div>
+                </div>
+            </form>          
+            </div>
+        </div>
+        <div class="card tablaContenedor">
+          <div class="card-body">
+              <!-- Formulario con los campos de fecha -->
+              <div class="row">
+                <div class="col-md-5 fecha mb-3">
+                    <div class="form-group fecha">
+                        <h4 for="fecha_inicio">Fecha de Inicio:</h4>
+                        <input type="date" id="fecha_inicio" class="form-control uniform-width" placeholder="Seleccionar fecha de inicio">
+                    </div>
+                </div>
+                <div class="col-md-5 fecha mb-3">
+                    <div class="form-group fecha">
+                        <h4 for="fecha_fin">Fecha de Fin:</h4>
+                        <input type="date" id="fecha_fin" class="form-control uniform-width" placeholder="Seleccionar fecha de fin">
+                    </div>
+                </div>
+            </div>
+            
+              <h3>Lista de Empleados</h3>
+      
+              <!-- Tabla -->
+              <div class="table-responsive">
+                  <table class="table table-bordered table-hover mx-auto custom-table">
+                      <thead class="Titulos">
+                          <tr>
+                  
+                              <th>Cédula</th>
+                              <th>ETB</th>
+                              <th>Nombres</th>
+                              <th>Cargo</th>
+                              <th>Correo</th>
+                              <th>Telefono contacto coorporativo</th>
+                              <th>Número centro costos</th>
+                              <th>Centro de costos</th>
+                              <th>Numero vicepresidencia</th>
+                              <th>Vicepresidencia</th>
+                              <th>Nombre jefe inmediato</th>
+                              <th>Central-ubicacion</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let item of items | paginate: { itemsPerPage: 2, currentPage: p }">
+                              <td>{{ item.cedula }}</td>
+                              <td>{{ item.etb }}</td>
+                              <td>{{ item.nombres }}</td>
+                              <td>{{ item.cargo }}</td>
+                              <td>{{ item.numeroCentroCosto }}</td>
+                              <td>{{ item.centroCosto }}</td>
+                              <td>{{ item.numeroVicepresidencia }}</td>
+                              <td>{{ item.vicepresidencia }}</td>
+                              <td>{{ item.jefeInmediato }}</td>
+                              <td>{{ item.adminInventario }}</td>
+                              <td>{{ item.correoAdminInventario }}</td>
+                              <td>{{ item.telefonoAdminInventario }}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <pagination-controls 
+                      (pageChange)="p = $event" 
+                      [previousLabel]="'Anterior'" 
+                      [nextLabel]="'Siguiente'">
+                  </pagination-controls>
+              </div>
+              
+              <!-- Botón de asignar administrador -->
+              <div class="form-group mt-4 asignarFecha">
+                  <button class="btn btn-success btn-block">Asignar fecha</button>
+              </div>
+          </div>
+      </div>
+      
+      
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js"></script>

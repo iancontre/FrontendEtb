@@ -1,4 +1,4 @@
-import { RouterModule } from '@angular/router';  // Asegúrate de importar RouterModule
+import { RouterModule } from '@angular/router'; 
 import { Component } from '@angular/core';
 import { MenubarComponent } from '../menubar/menubar.component';
 
@@ -11,6 +11,5 @@ import { MenubarComponent } from '../menubar/menubar.component';
 })
 export class DashboardComponent {
   title = 'Dashboard';
-
 
 }

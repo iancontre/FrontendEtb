@@ -1,15 +1,235 @@
-:root {
-    font-family: "Roboto", serif;
+.uniform-width {
+    width: 100%; 
+    box-sizing: border-box;
+}
+.container .formulario{
+    border-radius: 16px;
+}
+.container .tablaContenedor{
+    border-radius: 16px;
+}
+.container .formulario {
+    margin-bottom: 15px;
+}
+.container .formulario .card-body{
+    border-radius: 16px;
+}
+.container .tablaContenedor .card-body{
+    border-radius: 16px;
 }
 
-*, *::before, *::after {
-    -webkit-box-sizing: border-box;
+.card-body {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    color: #008ec1;
+    margin: 3px 0;
+}
+
+.tablaContenedor h3 {
+    color: #008ec1;
+    margin: 5px 0px 0px 0px;
+}
+
+.table th {
+    width: 150px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+table thead.Titulos th {
+    background-color: #008ec1;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+form .form-group label {
+    margin: 10px 0px 30px 0px ;
+}
+
+form .form-group input {
+    margin: 0px 0px 0px 0px; 
+    background-color: #fffdfd;
+    border: 1px solid #e6e6e6;
+    padding: 12px; 
+    width: 100%; 
+    max-width: 300px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.form-group label {
+    margin-top: 20px !important; 
+    margin-bottom: 20px !important; 
+    display: block;
+}
+
+
+form .filtrarBusqueda {
+    margin: 0px 0 0 0 !important; 
+    background-color: #EB830C;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    height: 40px;
+    width: auto;
+    padding: 0 20px;
+    transition: 0.4s;
+}
+
+.d-flex.align-items-end {
+    margin-top: 58px; 
+}
+
+.d-flex.align-items-end button {
+    margin-top: 0;
+}
+
+
+form  .filtrarBusqueda:hover {
+    background-color: #008ec1;
+    transform: scale(1.05);
+}
+
+.asignarFecha button {
+    background-color: #EB830C;
+    border: none;
+    transition: 0.4s;
+    height: 40px;
+    color: white;
+}
+
+.asignarFecha button:hover {
+    background-color: #008ec1;
+    transform: scale(1.05);
+}
+
+.table-responsive {
+    margin-bottom: 10px;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+}
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+    min-width: 1000px; 
+}
+
+table th, table td {
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+form .form-group input {
+    width: 100%;
+    padding: 10px;
+    margin: 0px 0px 0px 0px ;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+form .form-group input:focus {
+    border-color: #008ec1;
+    outline: none;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px; 
+}
+
+.form-group {
+    flex: 1;
+    min-width: 300px;
+}
+
+.row > .col-md-4 {
+    flex: 1;
+    min-width: 300px; 
+}
+
+.d-flex.align-items-end button {
+    margin-top: 0;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 10px; 
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px; 
+}
+
+.form-row .filtrarBusqueda {
+    height: 40px;
+    width: auto;
+    margin-top: 0; 
+}
+
+/* Estilo para los campos de fecha */
+.form-group.fecha label {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group.fecha input {
+    margin-top: 5px;
+    background-color: #fffdfd;
+    border: 1px solid #e6e6e6;
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.tablaContenedor h4{
+
+    color: #008EC1;
+}
+.form-group.fecha input:focus {
+    border-color: #008EC1; 
+    outline: none; 
+
+}
+.row .col-md-5.fecha {
+    margin-right: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.uniform-width {
+    width: 100%;
     box-sizing: border-box;
 }
 
- 
-
-
+   /*Styles nav*/
 nav {
     display: block;
 }
@@ -66,11 +286,7 @@ h3{
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    max-width: 100%;
-    margin: 20px auto;
-    border-radius: 12px;
     border-radius: 0;
-
 }
 
 .card-body {
@@ -422,22 +638,11 @@ h3{
     }
 }
 
-
-/* Style tabla de elementos a cargo */
-.table-container {
-    overflow-x: auto; 
-    margin-top: 20px;
-}
-
 /*Style tabla de elementos a cargo*/
-
 .table {
     margin-top: 20px;
     border-radius: 16px;
     border: 1px solid #dddddd6f;
-    width: 100%;
-    border-collapse: collapse;
-
 }
 
 .table th, .table td {
@@ -447,10 +652,9 @@ h3{
 }
 
 .table th {
-    background-color: #008ec1;
-    color: white;
     background-color:  #008ec1;
     color:  white;
+    
 }
 
 .table td input[type="checkbox"] {
@@ -482,13 +686,6 @@ h3{
     border: none;
 }
 
-.btn-success {
-    background-color: #214780;
-    color: white;
-    border: none;
-}
-
-
 .btn-secondary {
     background-color: #eb830c;
     color: white;
@@ -502,36 +699,18 @@ h3{
 .fas {
     font-size: 18px;
 }
-
-
-.table th, .table td {
-
 table {
     width: 100%;
     border-collapse: collapse;
     
 }
-}
+
 
 table th, table td {
-
     padding: 10px;
     border-right: 1px solid #e0e0e0; 
     border-color: #dbdbdb;
 }
-
-.table td:last-child, .table th:last-child {
-    border-right: none;
-}
-
-.table tr {
-    border-bottom: 1px solid #e0e0e0; 
-}
-
-.table tr:hover {
-    background-color: #f5f5f5; 
-}
-
 
 
 table td:last-child, table th:last-child {
@@ -547,7 +726,6 @@ table tr {
 table tr:hover {
     background-color: #f5f5f5; 
 }
-
 
 
 input[type="checkbox"] {
@@ -568,6 +746,7 @@ input[type="checkbox"]:checked {
     border-color: #25D366;      
 }
 
+
 input[type="checkbox"]:checked::after {
     content: "";
     position: absolute;
@@ -582,50 +761,12 @@ input[type="checkbox"]:checked::after {
 
 .detalle i {
     font-size: 18px; 
-    color: #0056b3;  
     color:#0056b3 ;  
     cursor: pointer; 
     transition: color 0.3s ease; 
-}
-.detalle i:hover {
-    color: #eb830c;  
-}
-
-/* Responsividad con media queries */
-@media (max-width: 768px) {
-    .table th, .table td {
-        font-size: 14px; /* Reduce el tamaño de fuente */
-        padding: 8px;
-    }
-
-    .btn {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-
-    .actions label {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .table th, .table td {
-        font-size: 12px; 
-        padding: 6px;
-    }
-
-    .btn {
-        padding: 6px 12px;
-        font-size: 10px;
-    }
-
-    .actions label {
-        font-size: 10px;
-    }
 }
 
 
 .detalle i:hover {
     color:  #eb830c;  
 }
-
