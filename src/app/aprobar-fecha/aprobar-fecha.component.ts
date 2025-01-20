@@ -3,13 +3,14 @@ import { RouterModule } from '@angular/router';
 import { MenubarComponent } from '../menubar/menubar.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CommonModule } from '@angular/common'; 
+
 @Component({
-    selector: 'app-modulo-parametrizacion',
+    selector: 'app-aprobar-fecha',
     imports: [RouterModule, MenubarComponent, NgxPaginationModule, CommonModule],
-    templateUrl: './modulo-parametrizacion.component.html',
-    styleUrls: ['./modulo-parametrizacion.component.css']
+    templateUrl: './aprobar-fecha.component.html',
+    styleUrl: './aprobar-fecha.component.css'
 })
-export class ModuloParametrizacionComponent {
+export class AprobarFechaComponent {
   p: number = 1; 
   items = [
     { cedula: '1078446576', etb: 'cra 8 # 20-56', nombres: 'Juan Pérez', cargo: 'Ingeniero', numeroCentroCosto: '001B', centroCosto: 'cra 8 # 20-56', numeroVicepresidencia: 'A003', vicepresidencia: 'cra 8 # 20-56', jefeInmediato: 'Carlos Martínez', adminInventario: 'Jose Hernandez', correoAdminInventario: 'jose.hernandezetb.com', telefonoAdminInventario: '3015476235' },

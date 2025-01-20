@@ -128,7 +128,8 @@ h3{
     top: 0;
     bottom: 0;
     overflow: auto;
-    background-color: #214780;
+    background-color: #0092BC;
+    border-top-right-radius: 2px;
 }
 
 .dashboard-compact .dashboard-nav {
@@ -150,6 +151,7 @@ h3{
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .dashboard-nav header .menu-toggle {
@@ -157,18 +159,8 @@ h3{
     margin-right: auto;
 }
 
-.dashboard-nav a {
-    color: #515151;
-}
-
 .dashboard-nav a:hover {
     text-decoration: none;
-}
-
-.dashboard-nav {
-    background-color: #0092BC;
-    border-top-right-radius: 2px;
-   
 }
 
 .dashboard-nav a {
@@ -182,9 +174,7 @@ h3{
     text-decoration: none;
     
 }
-.dashboard-nav header {
-    margin-top: 20px; /* Ajusta el valor según sea necesario */
-}
+
 .brand-logo i {
     color: #d2d1d1;
     font-size: 27px;
@@ -426,43 +416,8 @@ h3{
     flex-wrap: wrap; 
     gap: 20px; 
     justify-content: space-around; 
+    margin-left: 15px;
 }
-
-.card-large {
-    flex: 2; 
-    background: #ffffff;
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cards-small-container {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
-}
-
-.card-small {
-    flex: 1;
-    background: #ffffff;
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.shadow {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
-
-
-/*Styles primera tarejeta*/
 
 .card-large {
     position: relative;
@@ -480,6 +435,34 @@ h3{
     margin-top: 24px;
     height: 430px;
 }
+
+.cards-small-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.card-small {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    align-items: center;
+}
+
+.shadow {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/*Styles primera tarejeta*/
 
 .user-icon-wrapper {
     position: absolute;
@@ -546,18 +529,7 @@ h3{
 
 /*styles segunda tarjeta*/
 
-.card-small {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, border 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .card-small:hover {
     transform: translateY(-10px); 

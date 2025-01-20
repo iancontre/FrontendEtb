@@ -1,0 +1,111 @@
+<app-menubar></app-menubar>
+<div class="dashboard-app">
+    <header class="dashboard-toolbar">
+        <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+    </header>
+<div class="container ">
+    <!-- Card Contenedor para Filtros de Búsqueda y Notificaciones -->
+    <div class="card filtros">
+      
+      <div class="card-body ">
+        <!-- Filtros de Búsqueda -->
+        <h4>Filtros de Búsqueda</h4>
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-3">
+              <label for="centroCosto" class="form-label">Centro de Costos:</label>
+              <input type="text" class="form-control custom-input" id="centroCosto" placeholder="Centro de Costos">
+            </div>
+  
+            <div class="col-md-3">
+              <label for="vicepresidencia" class="form-label">Vicepresidencia:</label>
+              <input type="text" class="form-control custom-input" id="vicepresidencia" placeholder="Vicepresidencia">
+            </div>
+  
+            <div class="col-md-3">
+              <label for="jefeInmediato" class="form-label">Jefe Inmediato:</label>
+              <input type="text" class="form-control custom-input" id="jefeInmediato" placeholder="Nombre del Jefe">
+            </div>
+  
+            <div class="col-md-3">
+              <label for="ubicacion" class="form-label">Ubicación:</label>
+              <input type="text" class="form-control custom-input" id="ubicacion" placeholder="Ubicación">
+            </div>
+          </div>
+  
+          <div class="row mb-3">
+            <div class="col-md-3">
+              <label for="NumElemAsignados" class="form-label">Número elementos asignados:</label>
+              <input type="text" class="form-control custom-input" id="NumElemAsignados" placeholder="Número elementos asignados">
+            </div>
+  
+            <div class="col-md-3">
+              <label for="administrador" class="form-label">Administrador Inventario:</label>
+              <input type="text" class="form-control custom-input" id="administrador" placeholder="Administrador inventario">
+            </div>
+  
+            <div class="col-md-3 d-flex align-items-end">
+              <button type="button" class="btn btn-success filtrarBusqueda">Filtrar Búsqueda</button>
+            </div>
+          </div>
+  
+         
+        </form>
+    </div>
+  </div> 
+        <!-- Tabla -->
+        <div class="card tabla" >
+          <div class="card-body">
+            <div class="table-responsive">  
+            <table class="table table-bordered table-hover mx-auto custom-table">
+              <thead class="Titulos">
+                  <tr>
+                      <th class="col-md-4">Cedula</th>
+                      <th class="col-md-6">ETB</th>
+                      <th class="col-md-4">Nombres</th>
+                      <th class="col-md-4">Cargo</th>
+                      <th class="col-md-2">Correo</th>
+                      <th class="col-md-4">Telefono contacto corporativo</th>
+                      <th class="col-md-3">Numero centro costos</th>
+                      <th class="col-md-4">Centro de costos</th>
+                      <th class="col-md-4">Numero vicepresidencia</th>
+                      <th class="col-md-4">Vicepresidencia</th>
+                      <th class="col-md-4">Nombre jefe inmediato</th>
+                      <th class="col-md-4">Central ubicacion</th>
+                      <th class="col-md-4">Aprobar inventario</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr  *ngFor="let item of items | paginate: { itemsPerPage: 2, currentPage: p }">
+                      <td>{{item.cedula}}</td>
+                      <td>{{item.etb}}</td>
+                      <td>{{item.nombres}}</td>
+                      <td>{{item.cargo}}</td>
+                      <td>{{item.correo}}</td>
+                      <td>{{item.telefonoContacto}}</td>
+                      <td>{{item.numeroCentroCosto}}</td>
+                      <td>{{item.centroCosto}}</td>
+                      <td>{{item.numeroVicepresidencia}}</td>
+                      <td>{{item.vicepresidencia}}</td>
+                      <td>{{item.jefeInmediato}}</td>
+                      <td>{{item.centralUbicacion}}</td>
+                      <td><button class="btn btn-outline-success aprobarUno">Aprobar Inventario</button></td>
+                  </tr>    
+              </tbody>
+          </table>
+          <pagination-controls 
+          (pageChange)="p = $event" 
+          [previousLabel]="'Anterior'" 
+          [nextLabel]="'Siguiente'">
+        </pagination-controls>
+            </div>
+            <!-- Botón de Aprobación General -->
+            <div class="text-center mt-4">
+          
+                <button class="btn btn-success asignarFecha"[routerLink]="['/asignarFecha']">Asignar fecha</button>
+      
+            </div>
+            </div>
+          </div>
+  </div>
+  

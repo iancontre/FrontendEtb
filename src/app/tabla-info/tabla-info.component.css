@@ -1,8 +1,8 @@
 /* Centrar el div*/
 .container {
     position: absolute;
-    top: 30%; 
-    left: 56%; 
+    top: 35%; 
+    left: 57.2%; 
     transform: translate(-50%, -50%); 
     width: 85%; 
 }
@@ -17,6 +17,8 @@
 }
 table{
     margin: 0px 0px 10px 0px;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 /* Estilo para los encabezados de la tabla */
@@ -172,7 +174,8 @@ h3{
     top: 0;
     bottom: 0;
     overflow: auto;
-    background-color: #214780;
+    background-color: #0092BC;
+    border-top-right-radius: 2px;
 }
 
 .dashboard-compact .dashboard-nav {
@@ -194,6 +197,7 @@ h3{
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .dashboard-nav header .menu-toggle {
@@ -201,18 +205,8 @@ h3{
     margin-right: auto;
 }
 
-.dashboard-nav a {
-    color: #515151;
-}
-
 .dashboard-nav a:hover {
     text-decoration: none;
-}
-
-.dashboard-nav {
-    background-color: #0092BC;
-    border-top-right-radius: 2px;
-   
 }
 
 .dashboard-nav a {
@@ -226,9 +220,7 @@ h3{
     text-decoration: none;
     
 }
-.dashboard-nav header {
-    margin-top: 20px; /* Ajusta el valor según sea necesario */
-}
+
 .brand-logo i {
     color: #d2d1d1;
     font-size: 27px;
@@ -524,11 +516,6 @@ h3{
 
 .fas {
     font-size: 18px;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    
 }
 
 

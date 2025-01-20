@@ -2,16 +2,12 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MenubarComponent } from '../menubar/menubar.component';
 @Component({
-  selector: 'app-tabla-info',
-  standalone: true,
-  imports: [RouterModule,MenubarComponent],
-  templateUrl: './tabla-info.component.html',
-  styleUrl: './tabla-info.component.css'
+    selector: 'app-tabla-info',
+    imports: [RouterModule, MenubarComponent],
+    templateUrl: './tabla-info.component.html',
+    styleUrl: './tabla-info.component.css'
 })
 export class TablaInfoComponent {
-  constructor(){}
-  data(): void{
-  }
   Gerencia = "Direccion de gestion operativa";
   Vicepresidencia = "Vicepresidencia Experiencia";
   NomJefeInmediato = "Sergio Alfonso";

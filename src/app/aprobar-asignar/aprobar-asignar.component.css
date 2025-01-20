@@ -1,15 +1,113 @@
-:root {
-    font-family: "Roboto", serif;
+.container{
+    margin: -30px 0px 0px 110px;
 }
 
-*, *::before, *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+.container .card-body{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  .table th {
+    width: 150px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+    padding: 10px;  
+  }
+  .table td{
+    text-align: center;
+    vertical-align: middle;
+  }
+  table thead.Titulos th {
+    background-color: #008ec1;
+    color: white;
+    font-weight: bold;
+  }
+  
+.filtros{
+      margin: 80px 0px 20px 100px;
+}
+  
+.tabla{
+      margin: 0px 0px 0px 100px;
+  }
+  
+h4{
+      color: #214780;
+  }
+  
+form label{
+      margin: 10px 0px 10px 3px ;
+  }
+.custom-input {
+      height: 40px;
+      width: 80%;
+      background-color: #fffdfd;
+      border: solid 1px #e6e6e6;
+      border-radius: 10px;
+      padding: 10px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-input:focus {
+      border-color: #01a5e1; 
+      box-shadow: 0 0 5px rgba(1, 167, 228, 0.673); 
+      outline: none;
+    }
+    form  .filtrarBusqueda {
+      margin: 0px 0px 0px 0px;
+      background-color: #eb830c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.5s ease, transform 0.5s ease;
+      justify-self: end;
+      padding: 10px 20px;
+    }
+    
+  form .filtrarBusqueda:hover {
+      background-color: #0092bc;
+      color: white;
+      transform: scale(1.05);
+    }
+  .card-body .aprobarUno{
+    color: #008ec1;
+    border-color: #008ec1;
+    transition: 0.4s;
+  }  
+  .card-body .aprobarUno:hover{
+    color: white;
+    background-color: #0092bc;
+    transition: 0.4s;
+    transform: scale(1.05);
+  }
+  .card-body .asignarFecha{
+    display: flex;
+    justify-content: flex-start; 
+  }
+  .card-body .asignarFecha{
+    background-color: #eb830c;
+    transition: 0.4s;
+    color: white;
+    height: 45px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-body .asignarFecha:hover{
+    background-color: #0092bc;
+    transition: 0.4s;
+    transform: scale(1.05);
+}
+.card-body a{
+    text-decoration: none;
 }
 
- 
-
-
+/*Styles nav*/
 nav {
     display: block;
 }
@@ -66,11 +164,7 @@ h3{
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    max-width: 100%;
-    margin: 20px auto;
-    border-radius: 12px;
     border-radius: 0;
-
 }
 
 .card-body {
@@ -79,7 +173,6 @@ h3{
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 1.25rem;
-    margin-left: 10px;
 }
 
 .card-header {
@@ -122,7 +215,6 @@ h3{
     -ms-flex-positive: 2;
     flex-grow: 2;
     padding: 25px;
-    margin-left: 15px;
 }
 
 .dashboard-nav {
@@ -132,8 +224,7 @@ h3{
     top: 0;
     bottom: 0;
     overflow: auto;
-    background-color: #0092BC;
-    border-top-right-radius: 2px;
+    background-color: #214780;
 }
 
 .dashboard-compact .dashboard-nav {
@@ -155,7 +246,6 @@ h3{
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 20px;
 }
 
 .dashboard-nav header .menu-toggle {
@@ -163,10 +253,19 @@ h3{
     margin-right: auto;
 }
 
+.dashboard-nav a {
+    color: #515151;
+}
+
 .dashboard-nav a:hover {
     text-decoration: none;
 }
 
+.dashboard-nav {
+    background-color: #0092BC;
+    border-top-right-radius: 2px;
+   
+}
 
 .dashboard-nav a {
     color: #fff;
@@ -179,7 +278,9 @@ h3{
     text-decoration: none;
     
 }
-
+.dashboard-nav header {
+    margin-top: 20px; /* Ajusta el valor según sea necesario */
+}
 .brand-logo i {
     color: #d2d1d1;
     font-size: 27px;
@@ -415,37 +516,23 @@ h3{
     }
 }
 
-
-/* Style tabla de elementos a cargo */
-.table-container {
-    overflow-x: auto; 
-    margin-top: 20px;
-}
-
 /*Style tabla de elementos a cargo*/
-
 .table {
     margin-top: 20px;
     border-radius: 16px;
     border: 1px solid #dddddd6f;
-    width: 100%;
-    border-collapse: collapse;
-
 }
 
 .table th, .table td {
     padding: 12px;
     text-align: center;
     border-color: #f4f4f4;
-    table {
-        width: 100%;
-        border-collapse: collapse;   
-    }
 }
 
 .table th {
     background-color:  #008ec1;
     color:  white;
+    
 }
 
 .table td input[type="checkbox"] {
@@ -477,13 +564,6 @@ h3{
     border: none;
 }
 
-.btn-success {
-    background-color: #214780;
-    color: white;
-    border: none;
-}
-
-
 .btn-secondary {
     background-color: #eb830c;
     color: white;
@@ -497,30 +577,18 @@ h3{
 .fas {
     font-size: 18px;
 }
-
-
-
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
 
 
 table th, table td {
-
     padding: 10px;
     border-right: 1px solid #e0e0e0; 
     border-color: #dbdbdb;
 }
-
-.table td:last-child, .table th:last-child {
-    border-right: none;
-}
-
-.table tr {
-    border-bottom: 1px solid #e0e0e0; 
-}
-
-.table tr:hover {
-    background-color: #f5f5f5; 
-}
-
 
 
 table td:last-child, table th:last-child {
@@ -536,7 +604,6 @@ table tr {
 table tr:hover {
     background-color: #f5f5f5; 
 }
-
 
 
 input[type="checkbox"] {
@@ -557,6 +624,7 @@ input[type="checkbox"]:checked {
     border-color: #25D366;      
 }
 
+
 input[type="checkbox"]:checked::after {
     content: "";
     position: absolute;
@@ -571,47 +639,12 @@ input[type="checkbox"]:checked::after {
 
 .detalle i {
     font-size: 18px; 
-    color: #0056b3;  
+    color:#0056b3 ;  
     cursor: pointer; 
     transition: color 0.3s ease; 
-}
-
-
-/* Responsividad con media queries */
-@media (max-width: 768px) {
-    .table th, .table td {
-        font-size: 14px; /* Reduce el tamaño de fuente */
-        padding: 8px;
-    }
-
-    .btn {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-
-    .actions label {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .table th, .table td {
-        font-size: 12px; 
-        padding: 6px;
-    }
-
-    .btn {
-        padding: 6px 12px;
-        font-size: 10px;
-    }
-
-    .actions label {
-        font-size: 10px;
-    }
 }
 
 
 .detalle i:hover {
     color:  #eb830c;  
 }
-

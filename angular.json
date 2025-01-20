@@ -20,19 +20,19 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-         "assets": [
+            "assets": [
               "src/assets",
               "src/favicon.ico"
             ],
-
             "styles": [
               "src/styles.css",
-                "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-                "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-                "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+
             ],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -94,10 +94,14 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-               "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
-            "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
+            "karmaConfig": "karma.conf.js"
+
           }
         }
       }
