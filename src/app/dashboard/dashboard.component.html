@@ -11,15 +11,15 @@
                         <img src="assets/images/icons/iconUser.png" alt="User Icon" class="user-icon-3d">
                     </div>
                     <div class="user-info">
-                        <div class="welcome-message">
-                            <p class="user-name"> ¡Bienvenido Julian Rodriguez!</p>
+                        <div class="welcome-message" >
+                            <p class="user-name" > ¡BIENVENIDO {{ user.givenName }} {{ user.sn }}  !</p>
                         </div>
                         <div class="user-details">
                             <div class="user-role">
                                 <strong>Rol principal ETB</strong>
-                                <p>Gestor de Proyectos</p>
+                                <p>{{ user.employeeType }}</p>
                             </div>
-                            <div class="user-other-roles">
+                            <div class="user-x1xx|other-roles">
                                 <strong>Roles Activos fijos:</strong>
                                 <ul>
                                     <li>Usuario de activos fijos</li>
